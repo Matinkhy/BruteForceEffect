@@ -14,11 +14,11 @@ public class BruteForceEffect {
 
         System.out.println("Enter a text to make it seem as if it is being brute forced in the console dialogue");
 
-        input = scan.next();
+        input = scan.nextLine();
         length = input.length();
 
-        if (length == 0) {
-            System.out.println("You entered nothing");
+        if (length == 0|| input.isBlank()) {
+            System.out.println("You didn't enter anything");
         } else {
             while (!finished) {
 
@@ -31,7 +31,7 @@ public class BruteForceEffect {
                     }
 
                     try {
-                        Thread.sleep(10);
+                        Thread.sleep(5);
                     } catch (Exception e) {
                     }
 
